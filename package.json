@@ -16,7 +16,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "yes",
-    "start": "npx nodemon server"
+    "start": "node server.js"
   },
   "author": "Clem",
   "license": "ISC"
