@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MyBlog!</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	<script>
+
+		fetch('./blog')
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				appendData(data);
+			})
+			.catch(function (err) {
+				console.log('error: ' + err);
+			});
+
+		function appendData(data) {
+			var mainContainer = document.getElementById("myData");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = '<h1>' + data[i].blogName + '</h1><b>' + data[i].blogSnippet + '</b><p>' + data[i].blogBody;
+				mainContainer.appendChild(div);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="navbar">
+		<h1>My Blog</h1>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About me</a></li>
+			<li><a href="blog.html">Blog</a></li>
+		</ul>
+	</div>
+	<a href="./create.html">Create new post</a>
+	<h1>Welcome to my blog!</h1>
+	<div id=myData></div>
+
+</body>
+
+</html>

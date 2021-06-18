@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fullstack Prints</title>
+</head>
+
+<body>
+    <div id="myData"></div>
+    <script>
+        const url = 'http://localhost:8889/products';
+        fetch(url).then(res => res.json()).then(products => console.log(products));
+        const data = fetch(url);
+
+        fetch('http://localhost:8889/products')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
+</body>
+
+</html>

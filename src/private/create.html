@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MyBlog!</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	
+</head>
+
+<body>
+	<div id="navbar">
+		<ul>
+			<li><b>MyBlog</b></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About me</a></li>
+			<li><a href="blog.html">Blog</a></li>
+		</ul>
+	</div>
+
+	<h1>Create a new post</h1>
+	<p>Type in the details and click submit to make a new post
+	</p>
+
+	<form method="POST" action="./blog">
+        <label>Post Name</label>
+		<input type="text" name="blogName" id="blogName" required>
+		<label>Post Snippet</label>
+		<input type="text" name="blogSnippet" id="blogSnippet" required>
+        <label>Post Body</label>
+		<textarea name="blogBody" id="blogBody" rows="4" cols="50" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

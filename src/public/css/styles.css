@@ -1,0 +1,78 @@
+body {
+	width: 75%;
+	margin: auto ;
+}
+ #navbar {
+     padding: 50px;
+ }
+ #navbar ul { 
+	margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: right; 
+	background-color: #000; 
+	} 
+
+
+#navbar b {
+	padding-right: 5vw;
+	color: #fff; 
+}
+ 
+#navbar ul li {  
+	display: inline; 
+	font-size: 1.5vw;
+	} 
+ 
+#navbar ul li a { 
+	text-decoration: none; 
+	padding: .2em 1em; 
+	color: #fff; 
+	background-color: #000; 
+	} 
+ 
+#navbar ul li a:hover { 
+	color: #000; 
+	background-color: #fff; 
+	} 
+
+label {
+    display: block;
+    width: 5vw;
+    
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=password], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+textarea {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+div{
+    border-bottom: 1px solid grey;
+}
+
